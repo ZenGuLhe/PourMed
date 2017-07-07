@@ -26,7 +26,7 @@
 		<camunda-bpm-spring-boot-starter.version>2.1.2</camunda-bpm-spring-boot-starter.version>    <!-- #2 for Camunda BPM -->
 	</properties>
 
-	<dependencyManagement>     <!-- #3 for Camunda BPM -->
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.camunda.bpm</groupId>
@@ -39,10 +39,6 @@
 	 </dependencyManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -58,26 +54,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-		
 		<dependency>		<!-- #4 for Camunda BPM -->
 			<groupId>org.camunda.bpm.extension.springboot</groupId>
 			<artifactId>camunda-bpm-spring-boot-starter</artifactId>
 			<version>${camunda-bpm-spring-boot-starter.version}</version>
 		</dependency>
-		<dependency>		<!-- #5 for Camunda BPM (with REST API) -->   	<!-- http://localhost:8080/rest/engine -->
-			<groupId>org.camunda.bpm.extension.springboot</groupId>			<!-- http://localhost:8080/rest/process-definition -->
-			<artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
-			<version>${camunda-bpm-spring-boot-starter.version}</version>
-		</dependency>
-		<dependency>		<!-- #6 for Camunda BPM (wih Web Applications (Admin, Cockpit and Tasklist)) -->
-			<groupId>org.camunda.bpm.extension.springboot</groupId>			  <!-- Welcome : http://localhost:8080 -->
-			<artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>   <!-- admin : http://localhost:8080/app/admin/index.html -->
-			<version>${camunda-bpm-spring-boot-starter.version}</version>     <!-- tasklist : http://localhost:8080/app/tasklist/index.html -->
-		</dependency>														  <!-- cockpit : http://localhost:8080/app/cockpit/index.html -->
 	</dependencies>
 
 	<build>
